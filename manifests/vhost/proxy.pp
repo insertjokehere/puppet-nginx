@@ -32,6 +32,7 @@ define nginx::vhost::proxy (
   $template        = 'nginx/vhost-proxy.conf.erb',
   $upstream_server = 'localhost',
   $upstream_port   = '8080',
+  $upstream_scheme = 'http',
   $servername      = '',
   $ssl             = false,
   $ssl_port        = '443',
