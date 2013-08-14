@@ -22,11 +22,6 @@ class nginx::server (
   include nginx
   include nginx::params
 
-  # Platform specific server setup items
-  case $operatingsystem {
-    'debian': { include nginx::server::debian }
-  }
-
   package{ 'nginx':
     ensure => present,
     name   => $nginx::params::package,
